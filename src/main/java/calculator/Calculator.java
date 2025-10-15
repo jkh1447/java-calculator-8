@@ -49,10 +49,22 @@ public class Calculator {
     }
 
     public int sum(String delimiter, String nums){
-
+        String[] numbers = nums.split(delimiter);
         int sum = 0;
 
+        for(String num : numbers) {
 
+            int n;
+            try {
+                n = Integer.parseInt(num);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("올바른 숫자 입력이 아닙니다.");
+            }
+            if (n < 0) throw new IllegalArgumentException("음수는 입력할 수 없습니다.");
+            sum += n;
+
+
+        }
         return sum;
     }
 }
