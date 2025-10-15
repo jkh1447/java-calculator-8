@@ -10,7 +10,7 @@ public class Calculator {
         System.out.println("덧셈할 문자열을 입력해 주세요.");
         String str = readLine();
         int result = parseAndSum(str);
-
+        System.out.println("결과 : " + result);
     }
 
     public int parseAndSum(String str) {
